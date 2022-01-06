@@ -1,4 +1,4 @@
-**THIS IS A FORK OF https://github.com/marooou/postfix-roundcube**
+**This work is based on https://github.com/marooou/postfix-roundcube**
 
 
 # postfix-roundcube
@@ -16,13 +16,13 @@ mkdir -p /data/
 2. Start docker container
 
 ```
-docker run -e "ADMIN_USERNAME=root"
-           -e "ADMIN_PASSWD=password" 
-           -e "DOMAIN_NAME=example.com"
-           -e "USERS=user1:pass1,user2:pass2"
-           -d -v /data/mysql:/var/lib/mysql -v /data/vmail/:/var/vmail -v /data/log:/var/log 
-           -p 25:25 -p 80:80 -p 110:110 -p 143:143 -p 465:465 -p 993:993 -p 995:995 
-           marooou/postfix-roundcube
+docker run -e "ADMIN_USERNAME=root" \
+           -e "ADMIN_PASSWD=password" \
+           -e "DOMAIN_NAME=example.com" \
+           -e "USERS=user1:pass1,user2:pass2" \
+           -d -v /data/mysql:/var/lib/mysql -v /data/vmail/:/var/vmail -v /data/log:/var/log \
+           -p 25:25 -p 80:80 -p 110:110 -p 143:143 -p 465:465 -p 993:993 -p 995:995 \
+           jamj2000/postfix-roundcube
 ```
 
 ## Possible environment variables
